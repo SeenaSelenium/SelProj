@@ -21,7 +21,10 @@ public static void main(String[] args) {
 		Actions action = new Actions(driver);
 		
 		action.contextClick(el).perform();
-		driver.findElement(By.linkText("Copy me")).click();
+		//driver.findElement(By.linkText("Copy Me")).click();
+		//driver.findElement(By.xpath("//div[contains(@onclick,'callOnItemClick('Copy')')]")).click();
+		driver.findElement(By.xpath("//div[@id='rightclickItem']/div[2]")).click();
+		driver.switchTo().alert().accept();
 		
 	}
 }
